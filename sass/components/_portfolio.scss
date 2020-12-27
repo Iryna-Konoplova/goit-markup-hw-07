@@ -17,22 +17,23 @@
   background: #f5f4fa;
   color: $title-text-color;
   font-family: inherit;
-  font-weight: 500;
+  @include font-options(500, 16px, 1.62, 0.03em);
+  /*font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em;*/
   text-align: center;
   cursor: pointer;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.button:hover,
-.button:focus {
-  background: $accent-color;
-  color: $hero-title-color;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  &:hover,
+  &:focus {
+    background: $accent-color;
+    color: $hero-title-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .portfolio-button .item:not(:last-child) {
@@ -70,12 +71,12 @@
   overflow: hidden;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.portfolio-item .item:hover,
-.portfolio-item .item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .portfolio-item .item:nth-child(3n) {
@@ -116,10 +117,11 @@
   height: 168px;
 
   color: $hero-title-color;
-  font-weight: 400;
+  @include font-options(400, 18px, 1.55, 0.03em);
+  /*font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em;*/
 }
 
 .portfolio-link:hover .portfolio-overlay,
@@ -132,10 +134,11 @@
   margin-bottom: 4px;
 
   color: $title-text-color;
-  font-weight: 700;
+  @include font-options(700, 18px, 2, 0.06em);
+  /*font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.06em;*/
 }
 
 .subtitle {
@@ -143,8 +146,9 @@
   margin-bottom: 0;
 
   color: $primary-text-color;
-  font-weight: 400;
+  @include font-options(400, 16px, 1.88, 0.03em);
+  /*font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em;*/
 }

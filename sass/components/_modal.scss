@@ -53,16 +53,16 @@
   color: #000000;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    outline: #ffffff00;
+    color: $accent-color;
+  }
 }
 
 .close {
   fill: currentColor;
-}
-
-.button-modal:hover,
-.button-modal:focus {
-  outline: #ffffff00;
-  color: $accent-color;
 }
 
 /* form-modal */
@@ -72,11 +72,12 @@
   margin-bottom: 12px;
 
   color: $title-text-color;
-  font-weight: 700;
+  @include font-options(700, 20px, 1.15, 0.03em);
+  /*font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+  letter-spacing: 0.03em;*/
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .modal-name,
@@ -109,14 +110,13 @@
   border-radius: 4px;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.input-name:focus,
-.input-tel:focus,
-.input-email:focus,
-.comment:focus {
-  outline: transparent;
-  border: 1px solid $accent-color;
+  &:focus,
+  &:focus,
+  &:focus {
+    outline: transparent;
+    border: 1px solid $accent-color;
+  }
 }
 
 .input-name:focus + .person,
@@ -133,14 +133,20 @@
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
 
-.comment::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
+  &:focus {
+    outline: transparent;
+    border: 1px solid $accent-color;
+  }
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    @include font-options(400, 12px, 1.16, 0.01em);
+    /*font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;*/
+  }
 }
 
 .modal-name span,
@@ -152,18 +158,20 @@
   margin-bottom: 4px;
 
   color: $primary-text-color;
-  font-weight: 400;
+  @include font-options(400, 12px, 1.17, 0.01em);
+  /*font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.01em;*/
 }
 
 .modal-agreement span {
   color: $primary-text-color;
-  font-weight: 400;
+  @include font-options(400, 14px, 1.71, 0.03em);
+  /*font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em;*/
 }
 
 .contract {
@@ -216,18 +224,19 @@
   margin-left: 124px;
 
   background: $accent-color;
-  font-weight: 700;
+  @include font-options(700, 16px, 1.88, 0.06em);
+  /*font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.06em;*/
   color: $hero-title-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.send:hover,
-.send:focus {
-  background: #188ce8;
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
 }
